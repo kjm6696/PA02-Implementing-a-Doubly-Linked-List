@@ -35,4 +35,18 @@ public class LinkedList<T> {
         return toInsert;
     }
 
+    public Node<T> delete(int location) {
+        Node<T> toDelete = null;
+        if (this.head != null) {
+            if(location > 0) {
+                this.tail = toDelete;
+            }else{
+                this.head = toDelete;
+            }
+
+        } else {
+            throw new IllegalArgumentException();
+        }
+        return toDelete;
+    }
 }
