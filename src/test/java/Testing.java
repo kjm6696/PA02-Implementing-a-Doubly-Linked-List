@@ -73,5 +73,19 @@ public class Testing {
         assertEquals("15 -> 9 -> NULL", dll.shuffle(dll.tail.data));
     }
 
+    @Test
+    public void testPartition(){
+        LinkedList<Integer> dll = new LinkedList<>();
+        Album album = new Album(1, "Michael Jackson", "Thriller", 9);
+        dll.append(album.getAlbumSongs());
+        Album album2 = new Album(2, "Red Hot Chili Peppers", "Californication", 15);
+        dll.append(album2.getAlbumSongs());
+        Album album3 = new Album(1, "The Weeknd", "Starboy", 18);
+        dll.append(album3.getAlbumSongs());
+        Album album4 = new Album(2, "Queen", "Queen", 10);
+        dll.append(album4.getAlbumSongs());
 
+        assertEquals("9 -> 15 -> 18 -> 10 -> NULL", dll.toString());
+        assertEquals("18 -> 10 -> NULL", dll.partition(album3.getAlbumSongs()));
+    }
 }

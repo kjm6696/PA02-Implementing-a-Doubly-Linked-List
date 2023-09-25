@@ -82,5 +82,18 @@ public class LinkedList<T> {
         return null;
     }
 
+    public Node<T> partition(T data) {
+        LinkedList<T> updateList = new LinkedList<>();
+        Node<T> partition = new Node<>(data);
+
+        while(partition != null) {
+            if (partition.tail.data.equals(1)) {
+                updateList.head = new Node<>(partition.data);
+                updateList.tail = updateList.head;
+            }
+            partition = partition.next;
+        }
+       return partition;
+    }
 
 }
