@@ -1,4 +1,4 @@
-public class Album {
+public class Album implements Comparable<Album>{
     int artistID;
     String artistName;
     String albumName;
@@ -10,8 +10,19 @@ public class Album {
         this.albumName = albumName;
         this.albumSongs = albumSongs;
     }
+
     @Override
     public String toString() {
         return artistID + ": " + albumSongs + " -- [" + artistName + "]";
+    }
+
+
+    @Override
+    public int compareTo(Album data) {
+        return Integer.compare(this.albumSongs, data.albumSongs);
+    }
+
+    public int getAlbumSongs() {
+        return albumSongs;
     }
 }
