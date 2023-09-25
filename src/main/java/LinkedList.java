@@ -49,4 +49,15 @@ public class LinkedList<T> {
         }
         return toDelete;
     }
+
+    public int getIndex(T data) {
+        Node<T> object = this.head;
+        if (object != null) {
+            if (object.data.equals(data)) {
+                return 0;
+            }
+            return 1;
+        }
+        return  -1;
+    }
 }
