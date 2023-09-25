@@ -49,17 +49,29 @@ public class Testing {
         assertEquals(1, dll.getIndex(album2.albumSongs));
     }
 
-//    @Test
-//    public void testToString() {
-//        LinkedList<Integer> dll = new LinkedList<>();
-//        assertEquals("NULL", dll.toString());
-//        Album album = new Album(1, "Michael Jackson", "Thriller", 9);
-//        dll.append(album.getAlbumSongs());
-//        assertEquals("9 -> NULL", dll.toString());
-//        Album album2 = new Album(2, "Red Hot Chili Peppers", "Californication", 15);
-//        dll.append(album2.getAlbumSongs());
-//        assertEquals("15 -> NULL", dll.toString());
-//
-//
-//    }
+    @Test
+    public void testToString() {
+        LinkedList<String> dll = new LinkedList<>();
+        assertEquals("NULL", dll.toString());
+        Album album = new Album(1, "Michael Jackson", "Thriller", 9);
+        dll.append(album.toString());
+        assertEquals("9 -> NULL", dll.toString());
+        Album album2 = new Album(2, "Red Hot Chili Peppers", "Californication", 15);
+        dll.append(album2.toString());
+        assertEquals("15 -> NULL", dll.toString());
+
+
+    }
+
+    @Test
+    public void testShuffle(){
+        LinkedList<String> dll = new LinkedList<>();
+        Album album = new Album(1, "Michael Jackson", "Thriller", 9);
+        dll.append(album.toString());
+        Album album2 = new Album(2, "Red Hot Chili Peppers", "Californication", 15);
+        dll.append(album2.toString());
+        assertEquals("15 -> 9 -> NULL", dll.shuffle(dll.tail.data));
+    }
+
+
 }

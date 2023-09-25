@@ -62,21 +62,25 @@ public class LinkedList<T> {
         return  -1;
     }
 
-//    @Override
-//    public String toString() {
-//       Node<T> toPrint = this.head;
-//
-//       StringBuilder stringBuilder = new StringBuilder();
-//
-//       if(toPrint != null) {
-//           stringBuilder.append(toPrint.data);
-//           stringBuilder.append(" -> ");
-//           toPrint = this.tail;
-//           stringBuilder.append(toPrint.data);
-//       }
-//       stringBuilder.append("NULL");
-//       return stringBuilder.toString();
-//    }
+    public String toString(T data) {
+       Node<T> toString = new Node<>(data);
+        StringBuilder stringBuilder = new StringBuilder();
+        if (toString != null) {
+            stringBuilder.append(toString.head.data);
+            stringBuilder.append(" -> ");
+            stringBuilder.append(toString.tail.data);
+        }
+        stringBuilder.append("NULL");
+        return stringBuilder.toString();
+    }
+
+    public String shuffle(T data){
+        Node<T> shuff = new Node<>(data);
+        if (data != null) {
+            return data + " -> " + data + " NULL";
+        }
+        return null;
+    }
 
 
 }
