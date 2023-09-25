@@ -1,3 +1,4 @@
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -44,8 +45,21 @@ public class Testing {
         dll.append(album.getAlbumSongs());
         Album album2 = new Album(2, "Red Hot Chili Peppers", "Californication", 15);
         dll.append(album2.getAlbumSongs());
-//        System.out.println(dll.getIndex(album.albumSongs));
         assertEquals(0, dll.getIndex(album.albumSongs));
-//        dll.getIndex(album.getAlbumSongs());
+        assertEquals(1, dll.getIndex(album2.albumSongs));
     }
+
+//    @Test
+//    public void testToString() {
+//        LinkedList<Integer> dll = new LinkedList<>();
+//        assertEquals("NULL", dll.toString());
+//        Album album = new Album(1, "Michael Jackson", "Thriller", 9);
+//        dll.append(album.getAlbumSongs());
+//        assertEquals("9 -> NULL", dll.toString());
+//        Album album2 = new Album(2, "Red Hot Chili Peppers", "Californication", 15);
+//        dll.append(album2.getAlbumSongs());
+//        assertEquals("15 -> NULL", dll.toString());
+//
+//
+//    }
 }

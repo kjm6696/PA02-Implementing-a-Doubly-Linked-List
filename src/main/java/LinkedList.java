@@ -4,6 +4,7 @@ public class LinkedList<T> {
 
     Node<T> head;
     Node<T> tail;
+    Node<T> next;
 
     public LinkedList() {
         this.head = null;
@@ -60,4 +61,22 @@ public class LinkedList<T> {
         }
         return  -1;
     }
+
+//    @Override
+//    public String toString() {
+//       Node<T> toPrint = this.head;
+//
+//       StringBuilder stringBuilder = new StringBuilder();
+//
+//       if(toPrint != null) {
+//           stringBuilder.append(toPrint.data);
+//           stringBuilder.append(" -> ");
+//           toPrint = this.tail;
+//           stringBuilder.append(toPrint.data);
+//       }
+//       stringBuilder.append("NULL");
+//       return stringBuilder.toString();
+//    }
+
+
 }
