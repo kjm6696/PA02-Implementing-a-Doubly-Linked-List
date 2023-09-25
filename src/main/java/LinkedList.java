@@ -1,4 +1,5 @@
 
+@SuppressWarnings("ALL")
 public class LinkedList<T> {
 
     Node<T> head;

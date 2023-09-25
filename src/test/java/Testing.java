@@ -1,10 +1,9 @@
 import org.junit.Test;
 
-import java.util.Optional;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
+@SuppressWarnings("ALL")
 public class Testing {
     @Test
     public void testAppend() {
