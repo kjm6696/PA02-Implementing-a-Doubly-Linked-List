@@ -10,7 +10,6 @@ public class Album {
         this.albumName = albumName;
         this.albumSongs = albumSongs;
     }
-
     @Override
     public String toString() {
         return artistID + ": " + albumSongs + " -- [" + artistName + "]";
